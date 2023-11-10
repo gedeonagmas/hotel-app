@@ -30,7 +30,7 @@ function Login() {
         localStorage.setItem(
           "hotel-user-data-gedeon",
           JSON.stringify(loginResponse?.data?.data)
-        ),
+        ),window.location.reload(true),
         context.setUserType(
           JSON.parse(localStorage.getItem("hotel-user-data-gedeon")).role
         ),
