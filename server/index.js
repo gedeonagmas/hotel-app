@@ -21,7 +21,7 @@ process.on("uncaughtException", (err) => {
 });
 
 app.use(express.json());
-app.use("/hotel/app/v1/", router);
+app.use("/hotel/app/v1", router);
 
 app.all("*", (req, res, next) => {
   res.status(200).json({ message: `${req.originalUrl} is invalid url` });
