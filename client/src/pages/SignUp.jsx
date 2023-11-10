@@ -8,7 +8,7 @@ import Success from "../components/Success/Success";
 import Error from "../components/Error/Error";
 import { navContext } from "../App";
 
-function Signup() {
+function SignUp() {
   const navigate = useNavigate();
   const context = useContext(navContext);
   const [signupData, signupResponse] = useSignupMutation();
@@ -278,4 +278,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignUp;
