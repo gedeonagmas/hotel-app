@@ -9,9 +9,6 @@ import { Dashboard, LogoutOutlined } from "@mui/icons-material";
 
 const NavBar = () => {
   const [mobileNav, setMobileNav] = useState(false);
-  useEffect(()=>{
-    window.location.reload(true);
-  });
   // const [mobile, setMobile] = useState(false);
   // const context = useContext(navContext);
   const { data, isFetching, isError, error: err } = useReadProfileInfoQuery();
