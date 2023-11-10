@@ -14,14 +14,13 @@ app.use(
     credentials: true,
   })
 );
-// process.on("uncaughtException", (err) => {
-//   console.log("SHUTTING DOWN");
-//   console.log(err.name, err.message);
-//   process.exit(1);
-// });
+process.on("uncaughtException", (err) => {
+  console.log("SHUTTING DOWN");
+  console.log(err.name, err.message);
+  process.exit(1);
+});
 
 app.use(express.json());
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/hotel/app/v1/", router);
 
 app.all("*", (req, res, next) => {
@@ -46,10 +45,10 @@ mongodb()
     process.exit(1);
   });
 
-// process.on("unhandledRejection", (err) => {
-//   console.log("SHUTTING DOWN");
-//   console.log(err.message, err.name);
-//   server.close(() => {
-//     process.exit(1);
-//   });
-// });
+process.on("unhandledRejection", (err) => {
+  console.log("SHUTTING DOWN");
+  console.log(err.message, err.name);
+  server.close(() => {
+    process.exit(1);
+  });
+});
