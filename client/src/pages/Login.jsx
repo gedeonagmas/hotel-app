@@ -30,13 +30,13 @@ function Login() {
         localStorage.setItem(
           "hotel-user-data-gedeon",
           JSON.stringify(loginResponse?.data?.data)
-        ),window.location.reload(true),
+        )
         context.setUserType(
           JSON.parse(localStorage.getItem("hotel-user-data-gedeon")).role
         ),
         context.setSetting(true),
         context.setLogin(false),
-        navigate("/", { replace: true }))
+        navigate("/", { replace: true }),window.location.reload(true))
       : null;
 
     loginResponse.status === "rejected"
