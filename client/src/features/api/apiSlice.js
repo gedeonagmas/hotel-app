@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/hotel/app/v1",
+    baseUrl: "https://hotel-app-server.vercel.app/hotel/app/v1",
   }),
   tagTypes: [
     "profile-info",
