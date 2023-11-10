@@ -53,7 +53,7 @@ function App() {
           {login ? (
             <Route path="login" element={<Login />} />
           ) : (
-            <Route
+            <Route 
               path="/login"
               element={
                 <PageNotFound message="Please First Logout To Your Current Account" />
