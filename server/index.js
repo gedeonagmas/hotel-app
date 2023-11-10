@@ -15,7 +15,7 @@ process.on("uncaughtException", (err) => {
 
 app.use(cors(
     {
-        origin: ["https://gym-app-client.vercel.app"],
+        origin: ["https://hotel-app-client-three.vercel.app"],
         methods: ["POST", "GET","PATCH","DELETE","PUT"],
         credentials: true
     }
