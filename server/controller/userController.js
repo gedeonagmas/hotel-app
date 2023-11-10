@@ -3,6 +3,7 @@ const asyncCatch = require("express-async-catch");
 const { User } = require("./../models/signupModel");
 const { tokenGenerator } = require("../utils/tokenGenerator");
 const crypto = require("crypto");
+const cloudinary = require("./../config/cloudinary");
 
 exports.signupHandler = asyncCatch(async (req, res, next) => {
   if (req.files.profilePicture === undefined) {
@@ -13,7 +14,7 @@ exports.signupHandler = asyncCatch(async (req, res, next) => {
     return res
       .status(200)
       .json({ message: "Account Created Successfully", token, data });
-  }
+  }else if(req.files.profilePicture){
   cloudinary.uploader.upload(
     req.files.profilePicture[0].path,
     async function (err, result) {
@@ -32,7 +33,7 @@ exports.signupHandler = asyncCatch(async (req, res, next) => {
         .status(200)
         .json({ message: "Account Created Successfully", token, data });
     }
-  );
+  );}
 });
 
 exports.loginHandler = asyncCatch(async (req, res, next) => {
