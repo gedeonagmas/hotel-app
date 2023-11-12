@@ -36,8 +36,7 @@ function Login() {
         ),
         context.setSetting(true),
         context.setLogin(false),
-        navigate("https://hotel-app-client-three.vercel.app"),
-        window.location.reload(true))
+        navigate("https://hotel-app-client-three.vercel.app"))
       : null;
 
     loginResponse.status === "rejected"
