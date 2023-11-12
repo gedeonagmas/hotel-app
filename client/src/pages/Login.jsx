@@ -36,7 +36,7 @@ function Login() {
         ),
         context.setSetting(true),
         context.setLogin(false),
-        navigate("/"),window.location.reload(true))
+        navigate("/",{replace:true}))
       : null;
 
     loginResponse.status === "rejected"
