@@ -51,7 +51,7 @@ function App() {
           <Route path="/contact" element={<Contact type="contact" />}></Route>
           <Route path="/admindashboard" element={<AdminDashboard />} />
           {login ? (
-            <Route path="login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
           ) : (
             <Route 
               path="/login"
