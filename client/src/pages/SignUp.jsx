@@ -65,10 +65,8 @@ function SignUp() {
           JSON.stringify(signupResponse?.data?.data)
         ),
         context.setLogin(false),
-        setTimeout(() => {
-          setSuccess(false);
-          navigate("/login", { replace: true });
-        }, 2000))
+          setSuccess(false),
+          navigate("/login", { replace: true }),window.location.reload(true))
       : setSuccess(false);
   }, [signupResponse]);
 
