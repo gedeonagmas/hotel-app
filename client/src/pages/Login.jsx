@@ -19,6 +19,9 @@ function Login() {
   const [errorMessage, setErrorMessage] = useState("");
   const [pending, setPending] = useState(false);
 
+  const gotoHandler=()=>{
+    window.location = ('https://hotel-app-client-three.vercel.app'); 
+  }
   // need a refresh
   useEffect(() => {
     loginResponse.status === "fulfilled"
@@ -37,6 +40,7 @@ function Login() {
         context.setSetting(true),
         context.setLogin(false),
         navigate("/",{replace:true}),
+         gotoHandler(),
         window.location.reload(true))
       : null;
 
