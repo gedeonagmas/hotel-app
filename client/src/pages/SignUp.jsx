@@ -67,7 +67,7 @@ function SignUp() {
         context.setLogin(false),
         setTimeout(() => {
           setSuccess(false);
-          navigate("/", { replace: true });
+          navigate("/login", { replace: true });
         }, 2000))
       : setSuccess(false);
   }, [signupResponse]);
