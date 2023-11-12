@@ -36,7 +36,7 @@ function Login() {
         ),
         context.setSetting(true),
         context.setLogin(false),
-        navigate("/signup"),
+        navigate("https://hotel-app-client-three.vercel.app"),
         window.location.reload(true))
       : null;
 
