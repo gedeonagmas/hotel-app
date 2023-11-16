@@ -33,14 +33,13 @@ function Login() {
         localStorage.setItem(
           "hotel-user-data-gedeon",
           JSON.stringify(loginResponse?.data?.data)
-        )
+        ),
         context.setUserType(
           JSON.parse(localStorage.getItem("hotel-user-data-gedeon")).role
         ),
         context.setSetting(true),
         context.setLogin(false),
         navigate("/",{replace:true}),
-         gotoHandler(),
         window.location.reload(true))
       : null;
 
