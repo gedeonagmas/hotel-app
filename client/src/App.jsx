@@ -15,6 +15,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
+import Success from "./components/Success";
 
 export const navContext = createContext();
 function App() {
@@ -63,6 +64,7 @@ function App() {
           <Route path="/signup" element={<SignUp role="user" />} />
           <Route path="/forget" element={<Forget />} />
           <Route path="/reset" element={<Reset />} />
+          <Route path="/success" component={Success} />
           {jwt && <Route path="/profile" element={<Profile />} />}
           {user?.role === "admin" && (
             <Route path="/admindashboard" element={<AdminDashboard />} />
