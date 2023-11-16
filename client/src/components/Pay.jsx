@@ -40,12 +40,12 @@ const Pay = (props) => {
         <input
           type="hidden"
           name="callback_url"
-          value="http://localhost:3000"
+          value="https://hotel-app-client-three.vercel.app"
         />
         <input
           type="hidden"
           name="return_url"
-          value={`http://localhost:3000/success`}
+          value={`https://hotel-app-client-three.vercel.app/success`}
         />
         <input type="hidden" name="meta[title]" value="test" />
         <div className="flex p-5 font-bold text-[16px] flex-col gap-2">
